@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoQuizzy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="menu">
+        <img src="terra.gif" alt="Planeta Terra em movimento" class="gif">
+        <h1 class="title">GeoQuizzy</h1>
+        <p class="subtitle">Testa os teus conhecimentos de geografia!</p>
+        <a href="quiz.html" id="start-button">Começar Quiz</a>
+    </div>
+
+    <!-- Música de fundo -->
+    <audio id="background-music" src="background-music.mp3" autoplay loop></audio>
+
+    <script>
+        // Definindo o volume da música (ajustar para o nível desejado)
+        var audio = document.getElementById('background-music');
+        audio.volume = 0.2;
+    </script>
+</body>
+</html>

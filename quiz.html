@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Geografia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Música de fundo -->
+    <audio id="background-music" src="background-music.mp3" autoplay loop></audio>
+
+    <script>
+        // Definindo o volume da música (ajustar para o nível desejado)
+        var audio = document.getElementById('background-music');
+        audio.volume = 0.2; // Volume em 20%, ajuste conforme necessário
+    </script>
+
+    <div id="app">
+        <header>
+            <a href="index.html" class="back-button">← Menu Inicial</a>
+            <h1>Quiz de Geografia</h1>
+            <p>Testa os teus conhecimentos sobre geografia!</p>
+        </header>
+        <main id="quiz-container">
+            <div id="question-container">
+                <h2 id="question-title"></h2>
+                <img id="question-image" src="" alt="Imagem da pergunta">
+                <div id="options-container"></div>
+            </div>
+            <button id="next-button" class="hidden">Próxima Pergunta</button>
+        </main>
+        <footer>
+            <p id="score"></p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

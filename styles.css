@@ -1,0 +1,321 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #1e90ff, #87ceeb);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+}
+
+#quiz-container {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#question-image {
+    width: 100%;
+    max-height: 300px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+button {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+button.hidden {
+    display: none;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.option {
+    padding: 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.option:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+.correct {
+    background: #28a745 !important;
+}
+
+.wrong {
+    background: #dc3545 !important;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+footer p {
+    font-size: 18px;
+}
+/* Menu Inicial */
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e90ff, #87ceeb);
+    color: #fff;
+    text-align: center;
+}
+
+.menu-content {
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.menu-gif {
+    width: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+}
+
+h1 {
+    font-size: 48px;
+    font-family: 'Verdana', sans-serif;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+#start-button {
+    margin-top: 20px;
+    background: #ffa500;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+#start-button:hover {
+    background: #ff8c00;
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Estilos para o Menu Inicial */
+#menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1e90ff, #87ceeb);
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.gif {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-size: 3em;
+    font-family: 'Arial Black', sans-serif;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    font-family: 'Georgia', serif;
+    margin-bottom: 20px;
+}
+
+#start-button {
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-family: 'Arial', sans-serif;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#start-button:hover {
+    background: #45a049;
+}
+
+/* Esconde o menu ao iniciar o quiz */
+.hidden {
+    display: none;
+}
+
+/* Animação de fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Botão Voltar ao Menu Inicial */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: #fff;
+    color: #1e90ff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.back-button:hover {
+    background: #f0f0f0;
+    transform: scale(1.1);
+}
+
+/* Animação de transição entre páginas */
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Animação de saída */
+body.fade-out {
+    animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+/* Animação para o GIF final */
+.end-animation {
+    animation: fadeInScale 1s ease-in-out;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Animação de entrada: Fade-in com escala */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* Botão de jogar novamente */
+.retry-button {
+    background: #1e90ff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    margin-top: 20px;
+}
+
+.retry-button:hover {
+    background: #4682b4;
+    transform: scale(1.1);
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    h1, p {
+        text-align: center;
+    }
+
+    #question-image {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .retry-button {
+        width: 80%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    #question-image {
+        width: 100%;
+    }
+
+    .retry-button {
+        width: 100%;
+        font-size: 12px;
+    }
+}
